@@ -1,0 +1,14 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName {{ test_host }}
+    ServerAlias www.{{ test_host }}
+    DocumentRoot /opt/sites/test/htdocs
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+    <Directory /opt/sites/test/htdocs>
+        Options IncludesNoEXEC FollowSymLinks
+        Require all granted
+    </Directory>
+
+</VirtualHost>

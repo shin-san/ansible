@@ -1,0 +1,22 @@
+---
+- name: Create Test directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: ansible
+    group: ansible
+    mode: '0755'
+  loop:
+    - /opt/sites/test/conf
+    - /opt/sites/test/htdocs
+
+- name: Copy VirtualHost Config to Apache
+  template:
+    src: "{{ test_conf }}.j2"
+    dest: "/opt/sites/test/conf/{{ test_conf }}"
+
+- name: Create a Symbolic Link to sites-enabled
+  file:
+    src: "/opt/sites/test/conf/{{ test_conf }}"
+    dest: "/etc/apache2/sites-enabled/{{ test_conf }}"
+    state: link

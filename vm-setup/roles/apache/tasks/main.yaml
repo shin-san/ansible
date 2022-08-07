@@ -1,0 +1,20 @@
+---
+- name: Ping my hosts
+  ansible.builtin.ping:
+
+- name: Print message
+  ansible.builtin.debug:
+    msg: Hello world
+
+- name: Update the System Packages
+  apt: upgrade=yes update_cache=yes
+
+- name: Install Latest Apache
+  apt: name=apache2 update_cache=yes state=latest
+
+- name: Fix Apache Logs Permission
+  file:
+    path: /var/logs/apache2
+    state: directory
+    mode: '0755'
+    recurse: yes

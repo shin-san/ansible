@@ -1,0 +1,34 @@
+---
+- name: Install JAVA
+  apt: name=default-jdk state=present
+
+- name: Add Group "tomcat"
+  group: name=tomcat
+
+- name: Add User "tomcat"
+  become: True
+  become_method: sudo
+  user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
+
+- name: Create a Tomcat Directory
+  file:
+    path: /opt/tomcat
+    owner: tomcat
+    group: tomcat
+    mode: '0755'
+    recurse: yes
+
+- name: Download Tomcat
+  get_url: url=https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.23/bin/apache-tomcat-10.0.23.tar.gz dest=/tmp/apache-tomcat-10.0.23.tar.gz
+
+- name: Unarchive Tomcat
+  become: True
+  become_method: sudo
+  unarchive:
+    src: /tmp/apache-tomcat-10.0.23.tar.gz
+    dest: /opt/tomcat
+    owner: tomcat
+    group: tomcat
+    mode: '0755'
+    extra_opts: [--strip-components=1]
+    remote_src: yes
