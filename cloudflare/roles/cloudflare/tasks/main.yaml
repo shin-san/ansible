@@ -1,0 +1,16 @@
+---
+- name: Ping my hosts
+  ansible.builtin.ping:
+
+- name: Print message
+  ansible.builtin.debug:
+    msg: Hello world
+
+- name: Create CNAME record to azurevm.dev
+  community.general.cloudflare_dns:
+    zone: azurevm.dev
+    type: CNAME
+    value: test
+    account_email: nchan@gmail.com
+    account_api_key: dummyapitoken
+    state: present
