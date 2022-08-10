@@ -11,6 +11,6 @@
     zone: azurevm.dev
     type: CNAME
     value: test
-    account_email: nchan@gmail.com
-    account_api_key: dummyapitoken
+    account_email: nchan009@gmail.com
+    account_api_key: {{ cloudflare_dns_secret }}
     state: present

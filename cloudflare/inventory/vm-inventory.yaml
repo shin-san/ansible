@@ -4,6 +4,7 @@ control-node:
     vm01:
       ansible_host: 127.0.0.1
       account_email: nchan009@gmail.com
+      vault_password_file: ~/keys/vault-key.txt
   vars:
     ansible_user: ansible
     ansible_python_interpreter: /usr/bin/python3
