@@ -10,7 +10,9 @@
   community.general.cloudflare_dns:
     zone: azurevm.dev
     type: CNAME
-    value: test
-    account_email: nchan009@gmail.com
-    account_api_key: {{ cloudflare_dns_secret }}
+    record: "{{ item }}"
+    value: azurevm.dev
+    api_token: "{{ dns_secret }}"
     state: present
+  loop:
+    - test
