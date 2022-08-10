@@ -12,7 +12,7 @@
     type: CNAME
     record: "{{ item }}"
     value: azurevm.dev
+    proxied: yes
     api_token: "{{ dns_secret }}"
     state: present
-  loop:
-    - test
+  with_items: "{{ sites }}"

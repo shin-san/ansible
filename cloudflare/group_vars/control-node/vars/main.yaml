@@ -1,1 +1,5 @@
 # add vars here for control-node group
+---
+sites:
+  - test
+  - test2
