@@ -25,7 +25,7 @@
   become: True
   become_method: sudo
   unarchive:
-    src: {{ tomcat_archive_dest }}
+    src: "{{ tomcat_archive_dest }}"
     dest: /opt/tomcat
     owner: tomcat
     group: tomcat
