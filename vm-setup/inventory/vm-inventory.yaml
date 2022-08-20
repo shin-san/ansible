@@ -3,8 +3,6 @@ vms:
   hosts:
     vm01:
       ansible_host: 34.129.142.170
-      test_host: testvm.dev
-      test_conf: testvm.dev.conf
   vars:
     ansible_user: ansible
     ansible_python_interpreter: /usr/bin/python3
