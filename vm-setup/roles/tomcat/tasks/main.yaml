@@ -1,6 +1,6 @@
 ---
-- name: Install JAVA
-  apt: name=default-jdk state=present
+# - name: Install JAVA
+#   apt: name=default-jdk state=present
 
 - name: Add Group "tomcat"
   group: name=tomcat
