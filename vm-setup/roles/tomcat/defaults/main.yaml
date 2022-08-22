@@ -1,6 +1,6 @@
 ---
-tomcat_ver: 10.0.23                         # Tomcat version to install
-tomcat_archive_url: https://dlcdn.apache.org/tomcat/tomcat-10/v{{ tomcat_ver }}/bin/apache-tomcat-{{ tomcat_ver }}.tar.gz
+tomcat_ver: 9.0.65                         # Tomcat version to install
+tomcat_archive_url: https://dlcdn.apache.org/tomcat/tomcat-9/v{{ tomcat_ver }}/bin/apache-tomcat-{{ tomcat_ver }}.tar.gz
 tomcat_archive_dest: /tmp/apache-tomcat-{{ tomcat_ver }}.tar.gz
 ui_manager_user: manager                    # User who can access the UI manager section only
 ui_manager_pass: "{{ manager_password }}"      # UI manager user password

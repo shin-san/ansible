@@ -1,0 +1,10 @@
+---
+# This playbook deploys a standalone Apache and Tomcat 10 server.
+
+- hosts: azure-vm
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+
+  roles:
+    - tomcat
