@@ -1,0 +1,34 @@
+---
+directories:
+  - /etl/indue/import/input/customer/
+  - /etl/indue/import/output/customer/
+  - /etl/indue/import/copy/customer/
+  - /etl/indue/import/archive/customer/
+  - /etl/indue/import/error/customer/
+  - /etl/indue/export/sp/customer/import/
+  - /etl/indue/export/fad/customer/import/
+  - /etl/indue/export/mobile/customer/import/
+  - /etl/indue/import/input/cardcustomer/
+  - /etl/indue/import/output/cardcustomer/
+  - /etl/indue/import/copy/cardcustomer/
+  - /etl/indue/import/archive/cardcustomer/
+  - /etl/indue/import/error/cardcustomer/
+  - /etl/indue/export/sp/cardcustomer/import/
+  - /etl/indue/export/fad/cardcustomer/import/
+  - /etl/indue/export/mobile/cardcustomer/import/
+  - /etl/indue/import/input/account/
+  - /etl/indue/import/output/account/
+  - /etl/indue/import/copy/account/
+  - /etl/indue/import/archive/account/
+  - /etl/indue/import/error/account/
+  - /etl/indue/export/sp/account/import/
+  - /etl/indue/export/fad/account/import/
+  - /etl/indue/export/mobile/account/import/
+  - /etl/indue/import/input/accountcustomer/
+  - /etl/indue/import/output/accountcustomer/
+  - /etl/indue/import/copy/accountcustomer/
+  - /etl/indue/import/archive/accountcustomer/
+  - /etl/indue/import/error/accountcustomer/
+  - /etl/indue/export/sp/accountcustomer/import/
+  - /etl/indue/export/fad/accountcustomer/import/
+  - /etl/indue/export/mobile/accountcustomer/import/

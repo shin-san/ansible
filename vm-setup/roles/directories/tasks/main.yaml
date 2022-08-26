@@ -1,0 +1,9 @@
+---
+- name: Create Indue directory
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: tomcat
+    group: tomcat
+    mode: '0755'
+  with_items: "{{ directories }}"

@@ -8,7 +8,7 @@
 - name: Add User "tomcat"
   become: True
   become_method: sudo
-  user: name=tomcat group=tomcat home=/usr/share/tomcat createhome=no
+  user: name=tomcat group=tomcat home=/opt/tomcat createhome=no
 
 - name: Create a Tomcat Directory
   file:
